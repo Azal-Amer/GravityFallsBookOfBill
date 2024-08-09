@@ -27,7 +27,7 @@ This script checks for valid Gravity Falls codes on a specified website and save
 1. Edit the `codes_to_check` list in the script to include the codes you want to check.
 2. Run the script:
    ```
-   python gravity_falls_code_checker.py
+   python gravityFalls.py
    ```
 
 ## Output
