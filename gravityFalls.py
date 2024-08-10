@@ -145,13 +145,69 @@ if __name__ == "__main__":
 
     # Example list of codes to check
     codes_to_check = [
-    "Dipper", "Mabel", "Stan", "Ford", "Soos", "Wendy", "Bill", "Mystery", "Waddles",
-    "Weirdmageddon", "Journal", "Pacifica", "Gideon", "Gnomes", "Summerween", "Bottomless",
-    "TimeBaby", "Shmebulock", "Pines", "Cipher", "Multibear", "Manotaurs", "Pterodactyl",
-    "Gobblewonker", "Robbie", "Susan", "Toby", "McGucket", "Blendin", "Rumble", "Candy",
-    "Grenda", "Axolotl", "Tad", "Shacktron", "Dungeons", "Smile", "Northwest", "Mermando",
-    "Chutzpar", "Quentin", "Woodpecker", "Trembley", "Dip", "Grunkle", "Corduroy", "Ramirez",
-    "Gleeful", "Valentino", "Determined", "Blandin", "Strange", "Dip"
+    # Single word character names
+    "dipper", "mabel", "stan", "stanford", "soos", "wendy", "waddles", "grunkle",
+    "ford", "stanley", "fiddleford", "mcgucket", "gideon", "pacifica", "robbie",
+    "tambry", "thompson", "lee", "nate", "candy", "grenda", "blendin", "bill",
+    "cipher", "timebaby", "melody", "tad", "shmebulock", "quentin", "trembley",
+    "toby", "lazy", "susan", "manly", "dan", "tyler", "tate", "gorney", "gompers",
+
+    # Creatures and entities (single words)
+    "gnomes", "manotaurs", "multibear", "gremloblin", "gobblewonker", "summerween",
+    "trickster", "shapeshifter", "unicorn", "pterodactyl", "zombies", "clone",
+    "lilliputtians", "dinosaurs", "mermando", "rumble", "geodites", "killbots",
+    "cycloptopus", "leprecorn", "hawktopus", "squash", "stretch", "horrifyingtreearm",
+    "chutzpar", "celestabellebethabelle", "probablilitator", "infinitesimalizer",
+
+    # Locations (single words where possible)
+    "shack", "diner", "tent", "manor", "bunker", "mall", "pool", "dump", "gossiper",
+    "scuttlebutt", "greasy's", "dusk2dawn", "bud's", "hermanos", "edgy", "gleeful's",
+    "lookout", "waterfall", "cave", "forest", "junkyard", "arcade", "library",
+
+    # Objects and artifacts (single words where possible)
+    "journal", "rift", "portal", "carpet", "crystals", "dice", "timetape", "memorizer",
+    "dreamcatcher", "flashlight", "goggles", "magnet", "mindscape", "numberer",
+    "photocopier", "shrinkray", "snadger", "spellbook", "syrup", "height-altering",
+
+    # Concepts and themes (single words)
+    "weirdmageddon", "oddpocalypse", "shacktron", "globnar", "jambalam", "smezdey",
+    "woodstick", "blindeye", "oddity", "mystery", "cipher", "cryptogram", "backwards",
+    "paranormal", "supernatural", "interdimensional", "anomaly", "apocalypse",
+
+    # Codes and ciphers (single "words")
+    "PXQILTA", "OHDYH", "VKLIWHU", "FDHVDU", "DWEDVK", "EHDUR", "JLGHRQ",
+    "VWDQIRUG", "ZKHUH", "ZKDW", "ZKHQ", "ZKB", "ELOOB", "SLQHV", "UHYHUVH",
+    "WKUHH", "OHWWHUV", "EDFN", "PBVWHUB", "VKDFN", "VWDQ", "LV", "QRW",
+    "ZKDW", "KH", "VHHPV", "VXPPHU", "FRGH", "EUHDN", "KLGGHQ", "PHVVDJH",
+
+    # Easter eggs and hidden messages (single "words")
+    "618", "8ball", "lqlwldov", "kh'vvwloolqwkhyhqwv", "pbh[",
+    "eloo", "flskhu", "vwdqlvqrwzkdwkhvhhpv", "qhdawzhhn",
+
+    # Important longer phrases (keeping some key ones)
+    "reality is an illusion", "universe is a hologram", "buy gold",
+    "trust no one", "when gravity falls and earth becomes sky",
+    "fear the beast with just one eye", "beware the beast with just one eye",
+    "backwards message", "never mind all that", "my ex wife still misses me",
+    "but her aim is getting better", "i've got some children i need to make into corpses",
+    "the damaged have damage to do", "you cant break what's already broken",
+    "theres a darkness approaching", "a day will come in the future",
+    "everything you care about will change", "im still here", "i will return",
+
+    # Bill's wheel symbols
+    "pinetree", "shootingstar", "questionmark", "icebag", "llama", "glasses",
+    "sixfinger", "pentagram", "stitchedheart", "fez",
+
+    # Additional single words
+    "axolotl", "sweater", "waddles", "gnome", "mabel", "dipper", "ducktective",
+    "timepunch", "spacetime", "anthyding", "hootenanny", "nacho", "dorito",
+    "illuminati", "crossbow", "plaidypus", "snadger", "bewarb", "capacitor",
+    "puppets", "wax", "manliness", "soos", "Stan-o-war", "Stanchurian",
+    "hangman", "atbash", "vigenere", "caesarian", "trembley", "blubbs", "durland",
+    "bodacious", "sev'ral", "timez", "broseph", "dipingsauce", "hambone", "dippingsauce",
+    "schmebulock", "leaderaur", "boyband", "mabelcorn", "dippy", "tyrone", "blandin",
+    "lolph", "dundgren", "questiony", "exclamation", "fifteenyearold", "mcguckin",
+    "fiddleford", "oldman", "toot-toot", "mcboomboompants", "waddlesworth", "octavia",
 ]
     
     results = process_codes(codes_to_check)
