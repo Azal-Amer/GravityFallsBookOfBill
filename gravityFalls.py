@@ -133,6 +133,7 @@ def check_code(code, timeout):
                 text_filename = os.path.join(code_folder, f"{code}.txt")
                 with open(text_filename, 'w', encoding='utf-8') as f:
                     f.write(response.text)
+                print(f'{code} exists. Response saved as {text_filename}')
                 return f"Code '{code}' exists. Response saved as {text_filename}"
         else:
             return f"Code '{code}' does not exist. Status code: {response.status_code}"
@@ -159,19 +160,38 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check Gravity Falls codes")
     parser.add_argument("--timeout", type=int, default=30, help="Timeout for each request in seconds")
     parser.add_argument("--keywords", nargs='+', help="List of keywords to check")
+
     parser.add_argument("--file", help="File containing keywords to check (one per line)")
+    parser.add_argument("--flip", action="store_true", help="Flip the keywords before checking")
+    parser.add_argument("--thorough", action="store_true", help="Check all possible individual keywords, seperated by spaces, including the flipped ones")
     args = parser.parse_args()
+
 
     # Load previously checked codes
     checked_codes = load_checked_codes()
+    print(args.flip)
+    def breakOut(string):
+        return string.split(' ')
+    def flip(string):
+        return string[::-1]
+    def argumentFormatter(words):
+        if args.flip:
 
+            words = [flip(word) for word in words]
+        if args.thorough:
+            words += [flip(word) for word in words]
+            words += [subword for word in words for subword in breakOut(word)]
+            words+= [flip(subword) for subword in words]
+        return words
+    
     if args.file:
         with open(args.file, 'r') as f:
-            codes_to_check = [line.strip() for line in f]
+            codes_to_check=argumentFormatter([line.strip() for line in f])
+
     elif args.keywords:
-        codes_to_check = args.keywords
+        codes_to_check=argumentFormatter([code for code in args.keywords])
+
     else:
-        # Use the default list if no keywords or file provided
         codes_to_check = [
             "dipper", "mabel", "stan", "stanford", "soos", "wendy", "waddles", "grunkle",
             "ford", "stanley", "fiddleford", "mcgucket", "gideon", "pacifica", "robbie",
@@ -185,6 +205,5 @@ if __name__ == "__main__":
         print(f"Result for code '{code}':")
         print(result)
         print("---")
-
     # Save the updated set of checked codes
     save_checked_codes()

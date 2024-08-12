@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-y-8 text-white max-w-2xl print:hidden" data-controller="content" data-selectable="">
+<img class="cursor-zoom-in transition-all duration-150" data-action="click-&gt;content#expandImage" src="image_0.png"/>
+<button class="content-button" data-action="click-&gt;content#showContent:prevent" data-content="contract">ARE YOU READY?</button>
+</div>
+<div class="flex flex-col gap-y-8 text-white max-w-lg hidden" data-controller="content" data-selectable="" id="contract">
+<img class="cursor-zoom-in transition-all duration-150" data-action="click-&gt;content#expandImage" height="5559" id="soulcontract" src="SOULCONTRACT.png" width="2500"/>
+<button class="content-button" data-action="click-&gt;content#showContent:prevent click-&gt;content#playSound click-&gt;content#replaceSources" data-content="thanks" data-content-replacements-param="desk1,https://files.thisisnotawebsitedotcom.com/iyIp5IuDHiEV0RP2/blueflame-noflash.mp4;desk2,https://files.thisisnotawebsitedotcom.com/iyIp5IuDHiEV0RP2/blueflame-flash.mp4;sfx_static1,/assets/iyIp5IuDHiEV0RP2-static1.mp3;sfx_static3,/assets/iyIp5IuDHiEV0RP2-static3.mp3" data-content-sound-param="soul">SIGN</button>
+<button class="content-button" data-action="click-&gt;content#printImage:prevent" data-print="soulcontract">PRINT</button>
+<div class="text-center w-full text-white"><strong>or</strong></div>
+<button class="content-button" data-action="click-&gt;content#closeAll:prevent click-&gt;content#playSound" data-content-sound-param="lose">BE A COWARD</button>
+</div>
+<div class="flex flex-col gap-y-8 text-white max-w-lg hidden" data-controller="content" data-selectable="" id="thanks">
+<div class="text-center w-full text-white font-kidwriting" style="padding: 2rem; font-size: 48px">PLEASURE DOING BUSINESS WITH YOU</div>
+<button class="content-button" data-action="click-&gt;content#closeAll:prevent"><small>X</small> CLOSE</button>
+</div>
